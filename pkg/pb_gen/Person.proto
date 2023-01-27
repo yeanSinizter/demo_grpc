@@ -1,0 +1,16 @@
+syntax="proto3";
+package pb;
+option go_package="./pb";
+
+service PersonManagement {
+    rpc GetPerson (GetPersonRequest) returns (GetPersonResponse);
+}
+
+message GetPersonRequest {
+    string Name = 1;
+    string Age = 2;
+}
+
+message GetPersonResponse {
+    string status = 1;
+}
